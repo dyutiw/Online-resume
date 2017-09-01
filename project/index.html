@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="images/me.png" type="image/x-png">
+
+  <script src="js/jQuery.js"></script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/modules/exporting.js"></script>
+  <script src="js/helper.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtb0ICDtU4epmfrcQyO2ApcMTjWxbJfC0&libraries=places"
+          type="text/javascript"></script>
+
+  <meta name="viewport" content="width=device-width">
+</head>
+<body unresolved>
+  <div id="main">
+    <div id="header" class="center-content">
+      <h1 id = "name"> Dyuti Waghray</h1>
+      <span class ="white-text">Student Fresher</span>
+      <hr>
+      <ul id="topContacts" class='flex-box'>
+      <li class="flex-item">
+        <span class="orange-text">email</span>
+        <span class="white-text">dyuti.w@gmail.com</span>
+      </li>
+      <li class="flex-item">
+        <span class="orange-text">github</span>
+        <span class="white-text">dyutiw</span>
+      </li>
+      <li class="flex-item">
+        <span class="orange-text">twitter</span>
+        <span class="white-text">@dyutiW</span>
+      </li>
+      <li class="flex-item">
+        <span class="orange-text">location</span>
+        <span class="white-text">Hyderabad, India</span>
+      </li>
+      </ul>
+      <span class="welcome-message">
+        I just completed a B.E in IEM.
+      </span>
+      <h3 id="skills-h3">Skills at a glance:</h3>
+      <ul id="skills"class="flex-box">
+        <li class="flex-item">
+          <span class="white-text">Java</span>
+        </li>
+        <li class="flex-item">
+          <span class="white-text">python</span>
+        </li>
+        <li class="flex-item">
+          <span class="white-text">HTML/CSS</span>
+        </li>
+    </div>
+    <div style='clear: both;'></div>
+    <div id="workExperience" class='gray'>
+      <h2>Work Experience</h2>
+      <div class="work-entry">
+        <p>
+          fresher
+        </p>
+      </div>
+    </div>
+    <div id="projects">
+      <h2>Projects</h2>
+      <div class="project-entry">
+        <span class="work-entry">Movie website</span>
+        <div class="date-text">May 2017</div>
+        <p>
+          Created a movie website for intro to programming nanodegree
+        </p>
+    </div>
+    <div id="education" class='gray'>
+      <h2>Education</h2>
+      <div class="education-entry">
+        <a href="http://jssateb.ac.in/">JSSATE - B.E IEM </a>
+        <div class="date-text">2013-2017</div>
+        <div class="location-text">Bangalore</div>
+        <em>
+          <br>
+          Major: Industrial engineering and management
+        </em>
+    </div>
+
+    <div id="mapDiv">
+      <!-- TODO: fix Google API stuff and then uncomment this -->
+      <!-- <h2>Where I've Lived and Worked</h2>-->
+      <div id="map"></div>
+    </div>
+    <div id="letsConnect" class='dark-gray'>
+      <h2 class='orange center-text'>Let's Connect</h2>
+      <ul id="footerContacts" class="flex-box">
+        <li class="flex-item">
+          <span class="orange-text">email</span>
+          <span class="white-text">dyuti.w@gmail.com</span>
+        </li>
+        <li class="flex-item">
+          <span class="orange-text">github</span>
+          <span class="white-text">dyutiw</span>
+        </li>
+        <li class="flex-item">
+          <span class="orange-text">twitter</span>
+          <span class="white-text">@dyutiW</span>
+        </li>
+        <li class="flex-item">
+          <span class="orange-text">location</span>
+          <span class="white-text">Hyderabad, India</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="js/resumeBuilder.js"></script>
+
+  <script type="text/javascript">
+    if(document.getElementsByClassName("flex-item").length === 0) {
+      document.getElementById("topContacts").style.backgroundColor = "black";
+    }
+    if(document.getElementsByTagName("h1").length === 0) {
+      document.getElementById("header").style.backgroundColor = "black";
+    }
+    if(document.getElementsByClassName("work-entry").length === 0) {
+      document.getElementById("workExperience").style.backgroundColor = "black";
+    }
+    if(document.getElementsByClassName("project-entry").length === 0) {
+      document.getElementById("projects").style.backgroundColor = "black";
+    }
+    if(document.getElementsByClassName("education-entry").length === 0) {
+      document.getElementById("education").style.backgroundColor = "black";
+    }
+//    if(document.getElementsByClassName("skills-entry").length === 0) {
+//      document.getElementById("skillsChart").style.backgroundColor = "black";
+//    }
+    if(document.getElementsByClassName("flex-item").length === 0) {
+      document.getElementById("letsConnect").style.backgroundColor = "black";
+    }
+    if(document.getElementById("map") == undefined) {
+      document.getElementById("mapDiv").style.display = "none";
+    }
+  </script>
+</body>
